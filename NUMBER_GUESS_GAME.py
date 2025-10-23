@@ -5,8 +5,8 @@ class Numbersgame:
         self.min_range = min_range
         self.max_range = max_range
         self.max_attempts = max_attempts
+        self.all_scores = []
 
-    #Function to choose range
     def choose_range(self):
         try:
             min_range = int(input("Choose the minimum value (positive integer): "))
@@ -21,7 +21,6 @@ class Numbersgame:
         else:
             print("Invalid range. Minimum must be < maximum and both > 0.")
     
-    #Function to get guess
     def get_guess(self):
         while True:
             try:
@@ -34,7 +33,6 @@ class Numbersgame:
                 return guess
             print("Out of range. Try again.")
 
-    #Function to check guess
     def check_guess(self, guess, secret_number):
         if guess == secret_number:
             return "Correct"
@@ -42,16 +40,19 @@ class Numbersgame:
             return "Too Low!"
         else:
             return "Too High!"
-        
-    #function to start game
+    
+    def display_score(self, attempts):
+        self.all_scores.append(attempts)
+        best_score = min(self.all_scores)
+        print(f"Best score so far: {best_score} attempts!")
+    
     def playgame(self):
         attempts = 0
         secret_number = random.randint(self.min_range, self.max_range)
-        # print(f"(debug) secret is {secret_number}")  # uncomment if you want to test
 
         while attempts < self.max_attempts:
             attempts += 1
-            guess = self.get_guess()     # <-- call via self
+            guess = self.get_guess()     
             result = self.check_guess(guess, secret_number)
             print(result)
             if result == "Correct":
@@ -60,18 +61,15 @@ class Numbersgame:
                 return
 
         print(f"Out of attempts. The number was {secret_number}.")
-        
-    def display_score(self, attempts):
-        all_scores = []
-        
-        for score in all_scores:
-            a
-            
-        
-        while history <= 10:
-            print(history)
 
-# Example:
-game = Numbersgame()
-game.choose_range()
-game.playgame()
+
+# Run the game only when this file is executed directly
+if __name__ == "__main__":
+    game = Numbersgame()
+    while True:
+        game.choose_range()
+        game.playgame()
+        again = input("Play again? (y/n): ").lower()
+        if again != 'y':
+            print("THANKS FOR PLAYING")
+            break
