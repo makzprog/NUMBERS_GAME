@@ -7,7 +7,7 @@ Screenshot
 
 The following screenshot shows the game's UI. Place the provided image file at `images/guess_the_number.png` so it renders here on GitHub or in your local Markdown viewer:
 
-![Guess the Number screenshot](/Users/sm/Developer/NUMBERS_GAME/images/screen.png)
+<img width="621" height="601" alt="screen" src="https://github.com/user-attachments/assets/1a9a8aa1-c833-425e-bbed-ef668fb15985" />
 
 Quick start
 -----------
