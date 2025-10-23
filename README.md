@@ -21,5 +21,5 @@ python Run.py
 
 Credits
 -------
-Simple demo created for learning and small demos.
+Simple demo created for my students in my course. 
 
