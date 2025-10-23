@@ -19,11 +19,6 @@ Quick start
 python Run.py
 ```
 
-Notes
------
-- I added the Markdown and image reference but not the binary image file. Please save the attached screenshot as `images/guess_the_number.png` in the repository root so the image displays correctly.
-- If you'd like, I can add the `images/` folder and copy the image into it for you if you give me the image file in binary form or allow me to create it.
-
 Credits
 -------
 Simple demo created for learning and small demos.
