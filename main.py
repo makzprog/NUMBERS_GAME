@@ -1,4 +1,4 @@
-from game_logic import NumberGenerator, ConsoleUI, GameEngine
+from NUMBERS_GAME.game_logic import NumberGenerator, ConsoleUI, GameEngine
 
 if __name__ == "__main__":
     # Dependency Injection: create objects and pass them to the engine
